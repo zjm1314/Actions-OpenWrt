@@ -12,3 +12,7 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+#默认主题
+sed -i "s/luci-theme-bootstrap/luci-theme-argon/g feeds/luci/collections/luci/Makefile"
+#默认提示
+sed -i "s/OpenWrt /zjm21.08.16 compiled in $(TZ=UTC-8 date +%Y.%m.%d) @ OpenWrt /g" $ZZZ
